@@ -19,15 +19,17 @@
     <div class="questionDiv" th:each="questions : ${questions}">
         <h1 th:text="${questions.title}"></h1>
         <p th:text="${questions.body}"></p>
-        <p class="votes" th:text="'Upvotes: ' + ${questions.votes}"></p>
+        <p class="votes" th:text="'Votes: ' + ${questions.votes}"></p>
         <a class="voteButton" th:href="'/questions/' + ${questions.id} + '/upvote'">Upvote</a>
-        
-        
-    </div>
+		<a class="voteButton" th:href="'/questions/' + ${questions.id} + '/downvote'">Downvote</a>
+
+
+
+	</div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<script href="particle.js"/>
+    <script src="particle.js"></script>
 
 </body>
 
