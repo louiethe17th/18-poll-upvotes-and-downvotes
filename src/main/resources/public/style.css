@@ -10,11 +10,10 @@ body {
 .voteButton {
     margin-left: 65%;
     margin-bottom: 10px;
-    display: inline-block;
+    display: inline-table;
     width: 100px;
     background: #BADDAD;
     text-align: center;
-    box-sizing: border-box;
     color: black;
     border: darkseagreen outset 3px;
 }
@@ -31,9 +30,10 @@ canvas {
 /* ---- particles.js container ---- */
 
 #particles-js {
-
+    position: fixed;
+    z-index: -1;
     width: 100%;
-    height: 200px;
+    height: 100%;
     background-color: bisque;
     background-image: url("");
     background-repeat: no-repeat;

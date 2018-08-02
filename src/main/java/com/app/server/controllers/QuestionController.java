@@ -47,4 +47,17 @@ public class QuestionController {
         }
         return "redirect:/";
     }
+
+    @GetMapping("/{id}/downvote")
+    public String downvote(
+            @PathVariable("id") long id
+    ) {
+        Optional optional = QuestionRepository.findById(id);
+        Question Q = (Question) optional.get();
+        if (Q != null) {
+            Q.votes--;
+            QuestionRepository.save(Q);
+        }
+        return "redirect:/";
+    }
 }
